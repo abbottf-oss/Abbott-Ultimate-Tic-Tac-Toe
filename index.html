@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ultimate Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <div>
+        <h1>Ultimate Tic Tac Toe</h1>
+        <div id="status" class="status">Loading…</div>
+      </div>
+      <div class="actions">
+        <button id="nextRoundBtn" class="btn btn-primary">Next Round</button>
+        <button id="resetMatchBtn" class="btn btn-secondary">Reset Match</button>
+      </div>
+    </header>
+
+    <section class="panel names">
+      <div class="card">
+        <div class="label">Player X</div>
+        <input id="playerX" type="text" value="Player 1" placeholder="Name for X" />
+      </div>
+      <div class="card">
+        <div class="label">Player O</div>
+        <input id="playerO" type="text" value="Player 2" placeholder="Name for O" />
+      </div>
+      <div class="card">
+        <div class="label">Scoreboard</div>
+        <div class="scoregrid">
+          <div class="scorebox">
+            <div id="scoreNameX" class="scoreName">Player 1</div>
+            <div id="scoreX" class="scoreNum">0</div>
+            <div class="scoreSub">Wins (X)</div>
+          </div>
+          <div class="scorebox">
+            <div id="scoreNameO" class="scoreName">Player 2</div>
+            <div id="scoreO" class="scoreNum">0</div>
+            <div class="scoreSub">Wins (O)</div>
+          </div>
+          <div class="scorebox">
+            <div class="scoreName">Draws</div>
+            <div id="scoreD" class="scoreNum">0</div>
+            <div class="scoreSub">Ties</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <div id="board" class="bigBoard" aria-label="Ultimate Tic Tac Toe board"></div>
+
+      <section id="roundBanner" class="banner hidden">
+        <div id="bannerText" class="bannerText"></div>
+        <div class="bannerActions">
+          <button id="startNextRoundBtn" class="btn btn-primary">Start Next Round</button>
+          <button id="bannerResetBtn" class="btn btn-secondary">Reset Match</button>
+        </div>
+      </section>
+
+      <footer class="tip">
+        Tip: Your move sends your opponent to the small board matching your square. If that board is finished, they can play anywhere.
+      </footer>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
